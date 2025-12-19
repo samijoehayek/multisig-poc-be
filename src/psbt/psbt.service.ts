@@ -17,6 +17,9 @@ export class PsbtService {
     amount: number,
     feeRateSatVb: number,
   ) {
+    console.log(
+      `Creating spend from wallet ${walletName} to ${toAddress} amount ${amount} with fee rate ${feeRateSatVb} sat/vB`,
+    );
     // For PoC: let Core choose inputs from watch-only descriptor wallet.
     // includeWatching is mandatory.
     const res = await this.btc.rpcCall(

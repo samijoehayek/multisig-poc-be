@@ -27,7 +27,7 @@ export class EscrowService {
     // BIP48: m/48'/1'/0'/2' (regtest treated like testnet for derivation)
     // Child: /0/index (receive branch + index)
     const descriptorNoChecksum =
-      `wsh(sortedmulti(2,` +
+      `wsh(sortedmulti(1,` +
       `[${ledgerXfp}/48h/1h/0h/2h]${ledgerXpub}/0/${index},` +
       `[${coldcardXfp}/48h/1h/0h/2h]${coldcardXpub}/0/${index}` +
       `))`;
